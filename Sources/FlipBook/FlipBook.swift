@@ -319,7 +319,7 @@ public final class FlipBook: NSObject {
     #else
 
     @objc internal func tick(_ displayLink: CADisplayLink) {
-        guard let viewImage = sourceView?.fb_makeViewSnapshot() else {
+        guard let viewImage = sourceView?.snapshot() else {
             return
         }
         writer.writeFrame(viewImage)
